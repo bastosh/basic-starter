@@ -35,7 +35,7 @@ module.exports = {
   ],
 
   IMG: [
-    'src/img/*.*',
+    'src/img/*',
   ],
 
 };

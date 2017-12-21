@@ -6,6 +6,7 @@ var rimraf = require('rimraf').sync;
 var useref = require('gulp-useref');
 var cssnano = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
 var CONFIG = require('../config.js');
 
 // Erases the dist folder
@@ -17,8 +18,13 @@ gulp.task('cleanDist', function () {
 gulp.task('copyDist', function () {
   gulp.src(CONFIG.DIST_FILES)
     .pipe(gulp.dest('dist'));
-  gulp.src(CONFIG.IMG)
-    .pipe(gulp.dest('dist/img'));
+});
+
+// Optimizes images
+gulp.task('imagemin', function () {
+    gulp.src(CONFIG.IMG)
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('useref', function () {

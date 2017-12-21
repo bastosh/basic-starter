@@ -25,4 +25,4 @@ gulp.task('watch', function () {
 gulp.task('default', ['serve', 'watch']);
 
 // Builds the production files
-gulp.task('dist', ['cleanDist', 'copyDist', 'useref']);
+gulp.task('dist', ['cleanDist', 'copyDist', 'imagemin', 'useref']);
