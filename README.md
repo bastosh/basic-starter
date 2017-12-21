@@ -1,10 +1,11 @@
-# Front-end starter – Gulp, Stylus, Pug
+# Front-end starter
+Gulp, Stylus, Pug and a minimalist CSS framework
 
 ## Go to your workspace, clone the project, rename and go inside
 
 ```
 cd Workspace
-git clone https://github.com/bastosh/fronty.git
+git clone https://github.com/bastosh/basic-starter.git
 mv fronty myProject && cd $_
 ```
 
@@ -14,11 +15,10 @@ rm -rf .git && rm README.md
 git init
 git remote add origin https://github.com/username/myProject.git
 ```
-## Install dependencies (optional)
+## Install JS dependencies (optional)
 
 Use a package manager to install your dependencies:
 ```
-npm install bootstrap@4.0.0-alpha.6
 npm install jquery
 ```
 
@@ -29,10 +29,6 @@ Add the references to the config.js:
 JS_DEPS: [
   'node_modules/jquery/dist/jquery.js',
 ],
-
-CSS_DEPS: [
-  'node_modules/bootstrap/dist/css/bootstrap-reboot.css',
-],
 ```
 
 The gulpfile.js 'build' task will copy your dependencies to \_build/css/vendors and/or \_build/js/vendors. All you need to do then is to configure the base.pug file to link to your vendors :
@@ -41,7 +37,6 @@ The gulpfile.js 'build' task will copy your dependencies to \_build/css/vendors 
 
 block stylesheets
   // build:css css/app.css
-  link(rel='stylesheet' href='css/vendors/bootstrap-reboot.css')
   link(rel='stylesheet' href='css/main.css')
   // endbuild
 
