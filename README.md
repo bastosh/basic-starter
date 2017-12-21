@@ -6,7 +6,7 @@ Gulp, Stylus, Pug and a minimalist CSS framework
 ```
 cd Workspace
 git clone https://github.com/bastosh/basic-starter.git
-mv fronty myProject && cd $_
+mv basic-starter myProject && cd $_
 ```
 
 ## Set your own git repository to start a fresh new project
