@@ -14,9 +14,9 @@ font-family-sans-serif= -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "
 font-family-monospace= SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 font-family-base= font-family-sans-serif
 
-font-size-base= 20px
-font-size-sm= (font-size-base * .875)
-font-size-lg= (font-size-base * 1.25)
+font-size-base= 18px
+font-size-sm= round((font-size-base * .875))
+font-size-lg= round((font-size-base * 1.25))
 
 font-weight-thin= 100
 font-weight-light= 200
@@ -40,10 +40,17 @@ headings-line-height= line-height-small
 
 h1-font-size= (font-size-base * 2.5)
 h2-font-size= (font-size-base * 2)
-h3-font-size= (font-size-base * 1.75)
+h3-font-size= round((font-size-base * 1.75))
 h4-font-size= (font-size-base * 1.5)
-h5-font-size= (font-size-base * 1.25)
+h5-font-size= round((font-size-base * 1.25))
 h6-font-size= font-size-base
+
+h1-font-size-sm= (font-size-sm * 2.5)
+h2-font-size-sm= (font-size-sm * 2)
+h3-font-size-sm= round((font-size-sm * 1.75))
+h4-font-size-sm= (font-size-sm * 1.5)
+h5-font-size-sm= round((font-size-sm * 1.25))
+h6-font-size-sm= font-size-sm
 
 display1-font-size= (font-size-base * 6)
 display2-font-size= (font-size-base * 5)
@@ -56,7 +63,8 @@ display4-font-size= (font-size-base * 3)
 text-color-base= gray-90
 background-color-base= white
 meta-color= secondary
-primary= blue
+meta-color-hover= secondary
+primary= apple-blue
 secondary= gray-60
 
 //***********************
@@ -64,7 +72,7 @@ secondary= gray-60
 //***********************
 link-color= primary
 link-decoration= none
-link-hover-color= darken(primary, 15)
+link-hover-color= primary
 link-hover-decoration= underline
 
 //***********************
